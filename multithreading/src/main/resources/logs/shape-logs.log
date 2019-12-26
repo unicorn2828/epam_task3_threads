@@ -1,0 +1,16 @@
+2019-Dec-15 14:49:30 PM [main] ERROR by.kononov.multithreading.starter.Start - Interrupted or Execution exception 
+java.util.concurrent.ExecutionException: java.lang.IllegalMonitorStateException
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_201]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_201]
+	at by.kononov.multithreading.starter.Start.main(Start.java:61) [classes/:?]
+Caused by: java.lang.IllegalMonitorStateException
+	at java.util.concurrent.locks.ReentrantLock$Sync.tryRelease(Unknown Source) ~[?:1.8.0_201]
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.release(Unknown Source) ~[?:1.8.0_201]
+	at java.util.concurrent.locks.ReentrantLock.unlock(Unknown Source) ~[?:1.8.0_201]
+	at by.kononov.multithreading.action.impl.FerryActionImpl.unloadFerry(FerryActionImpl.java:78) ~[classes/:?]
+	at by.kononov.multithreading.entity.RiverFerry.call(RiverFerry.java:66) ~[classes/:?]
+	at by.kononov.multithreading.entity.RiverFerry.call(RiverFerry.java:1) ~[classes/:?]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:1.8.0_201]
+	at java.lang.Thread.run(Unknown Source) ~[?:1.8.0_201]
